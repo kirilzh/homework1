@@ -16,6 +16,7 @@ namespace TableStorageHandsOn
         }
 
         public CustomerEntity(string country, string name)
+           : this()
         {
             this.PartitionKey = country;
             this.RowKey = name;
