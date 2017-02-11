@@ -58,8 +58,6 @@ namespace TableStorage
             {
                 Console.WriteLine("Name:" + element.RowKey);
             }
-
-            Console.ReadKey();
             
             // 07 - Delete one of the entities from the table
             tops = TableOperation.Retrieve<CustomerEntity>("Netherlands", "Lohan");
@@ -80,7 +78,6 @@ namespace TableStorage
             var rezultat = (DynamicTableEntity)table.Execute(tops).Result;
 
             Console.WriteLine("Dynamic:" + rezultat.PartitionKey);
-            Console.ReadKey();
 
         }
     }
